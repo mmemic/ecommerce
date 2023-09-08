@@ -12,7 +12,7 @@ import {
 } from './mutations/cart';
 import { getCartQuery } from './queries/cart';
 import { getCollectionQuery } from './queries/collection';
-import { getPageQuery, getPagesQuery } from './queries/page';
+import { getPageQuery } from './queries/page';
 import { getProductQuery, getProductRecommendationsQuery } from './queries/product';
 import {
   Cart,
@@ -29,7 +29,6 @@ import {
   ShopifyCollectionOperation,
   ShopifyCreateCartOperation,
   ShopifyPageOperation,
-  ShopifyPagesOperation,
   ShopifyProduct,
   ShopifyProductOperation,
   ShopifyProductRecommendationsOperation,
@@ -354,11 +353,12 @@ export async function getPage(handle: string): Promise<Page> {
 }
 
 export async function getPages(): Promise<Page[]> {
-  const res = await shopifyFetch<ShopifyPagesOperation>({
-    query: getPagesQuery
-  });
+  // const res = await shopifyFetch<ShopifyPagesOperation>({
+  //   query: getPagesQuery
+  // });
 
-  return removeEdgesAndNodes(res.body.data.pages);
+  // return removeEdgesAndNodes(res.body.data.pages);
+  return [];
 }
 
 export async function getProduct(handle: string): Promise<Product | undefined> {
