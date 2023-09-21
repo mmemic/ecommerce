@@ -22,6 +22,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@directus/sdk": "^12.0.0",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "clsx": "^2.0.0",
