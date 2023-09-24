@@ -1,7 +1,7 @@
 import Cart from 'components/cart';
 import OpenCart from 'components/cart/open-cart';
 import LogoSquare from 'components/logo-square';
-import { getHeaderMenu } from 'lib/directus';
+import { getNavbarMenu } from 'lib/directus';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -10,7 +10,7 @@ import Search from './search';
 const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
-  const menu = await getHeaderMenu();
+  const menu = await getNavbarMenu();
 
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
