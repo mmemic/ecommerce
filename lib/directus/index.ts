@@ -34,7 +34,7 @@ export async function getHomepageFeaturedProducts(): Promise<Product[]> {
   const mappedProducts = products.map((item): Product => {
     return {
       ...item,
-      featuredImage: `${imageBaseUrl}/${item.featured_image.id}`,
+      featuredImage: `${imageBaseUrl}/${item.featured_image.id}?format=webp`,
       price: { amount: '123', currencyCode: 'BAM' }
     };
   });
@@ -49,7 +49,7 @@ export async function getHomepageRelatedProducts(): Promise<Product[]> {
   const mappedProducts = products.map((item): Product => {
     return {
       ...item,
-      featuredImage: `${imageBaseUrl}/${item.featured_image.id}`,
+      featuredImage: `${imageBaseUrl}/${item.featured_image.id}?format=webp`,
       price: { amount: '123', currencyCode: 'BAM' }
     };
   });
