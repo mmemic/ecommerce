@@ -266,33 +266,33 @@ export async function getCollection(handle: string): Promise<Collection | undefi
   return reshapeCollection(res.body.data.collection);
 }
 
-// export async function getCollectionProducts({
-//   collection,
-//   reverse,
-//   sortKey
-// }: {
-//   collection: string;
-//   reverse?: boolean;
-//   sortKey?: string;
-// }): Promise<Product[]> {
-//   // const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
-//   //   query: getCollectionProductsQuery,
-//   //   tags: [TAGS.collections, TAGS.products],
-//   //   variables: {
-//   //     handle: collection,
-//   //     reverse,
-//   //     sortKey: sortKey === 'CREATED_AT' ? 'CREATED' : sortKey
-//   //   }
-//   // });
+export async function getCollectionProducts(/* {
+  collection,
+  reverse,
+  sortKey
+}: {
+  collection: string;
+  reverse?: boolean;
+  sortKey?: string;
+} */): Promise<Product[]> {
+  // const res = await shopifyFetch<ShopifyCollectionProductsOperation>({
+  //   query: getCollectionProductsQuery,
+  //   tags: [TAGS.collections, TAGS.products],
+  //   variables: {
+  //     handle: collection,
+  //     reverse,
+  //     sortKey: sortKey === 'CREATED_AT' ? 'CREATED' : sortKey
+  //   }
+  // });
 
-//   // if (!res.body.data.collection) {
-//   //   console.log(`No collection found for \`${collection}\``);
-//   //   return [];
-//   // }
+  // if (!res.body. data.collection) {
+  //   console.log(`No collection found for \`${collection}\``);
+  //   return [];
+  // }
 
-//   // return reshapeProducts(removeEdgesAndNodes(res.body.data.collection.products));
-//   return [];
-// }
+  // return reshapeProducts(removeEdgesAndNodes(res.body.data.collection.products));
+  return [];
+}
 
 export async function getCollections(): Promise<Collection[]> {
   // const res = await shopifyFetch<ShopifyCollectionsOperation>({
@@ -384,28 +384,28 @@ export async function getProductRecommendations(productId: string): Promise<Prod
   return reshapeProducts(res.body.data.productRecommendations);
 }
 
-// export async function getProducts({
-//   query,
-//   reverse,
-//   sortKey
-// }: {
-//   query?: string;
-//   reverse?: boolean;
-//   sortKey?: string;
-// }): Promise<Product[]> {
-//   // const res = await shopifyFetch<ShopifyProductsOperation>({
-//   //   query: getProductsQuery,
-//   //   tags: [TAGS.products],
-//   //   variables: {
-//   //     query,
-//   //     reverse,
-//   //     sortKey
-//   //   }
-//   // });
+export async function getProducts(/* {
+  query,
+  reverse,
+  sortKey
+}: {
+  query?: string;
+  reverse?: boolean;
+  sortKey?: string;
+} */): Promise<Product[]> {
+  // const res = await shopifyFetch<ShopifyProductsOperation>({
+  //   query: getProductsQuery,
+  //   tags: [TAGS.products],
+  //   variables: {
+  //     query,
+  //     reverse,
+  //     sortKey
+  //   }
+  // });
 
-//   // return reshapeProducts(removeEdgesAndNodes(res.body.data.products));
-//   return [];
-// }
+  // return reshapeProducts(removeEdgesAndNodes(res.body.data.products));
+  return [];
+}
 
 // This is called from `app/api/revalidate.ts` so providers can control revalidation logic.
 export async function revalidate(req: NextRequest): Promise<NextResponse> {
